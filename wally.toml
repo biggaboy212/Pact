@@ -4,6 +4,7 @@ version = "1.0.3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 include = ["init.luau", "lib/"]
+# I hate metadata in packages
 exclude = ["generated", "test", "aftman.toml", "pipeline", "debug", ".vscode", ".globals", ".layoutignore", "layout.py", "project_context.txt"]
 
 [dependencies]
