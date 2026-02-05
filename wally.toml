@@ -1,0 +1,9 @@
+[package]
+name = "biggaboy212/pact"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+include = ["init.luau", "lib/"]
+private = true
+
+[dependencies]

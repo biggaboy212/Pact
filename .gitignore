@@ -1,0 +1,10 @@
+.env
+
+# Layout Generator
+layout.py
+.layoutignore
+project_context.txt
+
+# Artifacts and irrelevance
+test
+generated

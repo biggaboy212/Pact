@@ -1,0 +1,10 @@
+{
+    "server": {
+        "port": 3000
+    },
+
+    "input": "generated/debug.luau",
+    "enableDebugClient": true,
+    "hotReloads": true,
+    "watchList": []
+}

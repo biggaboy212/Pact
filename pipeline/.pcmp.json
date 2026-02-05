@@ -1,0 +1,67 @@
+{
+  "openComposedOutput": true,
+
+  "deployment": {
+    "enabled": true,
+    "github": {
+      "enabled": true,
+      "owner": "biggaboy212",
+      "repo": "trunet"
+    }
+  },
+
+  "buildConfigs": [
+    {
+      "name": "Debug",
+      "promptVersion": false,
+      "promptDeploy": false,
+      "frame": "pipeline/frames/frame.luau",
+      "darkluaConfig": "pipeline/darklua/unminified.json",
+      "input": "lib/lib.luau",
+      "output": "generated/debug/trunet.luau"
+    },
+    {
+      "name": "Beta",
+      "promptVersion": true,
+      "promptDeploy": true,
+      "prerelease": true,
+      "frame": "pipeline/frames/frame.luau",
+      "darkluaConfig": "pipeline/darklua/stable.json",
+      "input": "lib/lib.luau",
+      "output": "generated/beta/trunet.luau",
+      "variants": [
+        {
+          "name": "Typed",
+          "darkluaConfig": "pipeline/darklua/typed.json",
+          "output": "generated/beta/trunet-typed.luau"
+        },
+        {
+          "name": "Unminified",
+          "darkluaConfig": "pipeline/darklua/unminified.json",
+          "output": "generated/beta/trunet-unminified.luau"
+        }
+      ]
+    },
+    {
+      "name": "Release",
+      "promptVersion": true,
+      "promptDeploy": true,
+      "frame": "pipeline/frames/frame.luau",
+      "darkluaConfig": "pipeline/darklua/stable.json",
+      "input": "lib/lib.luau",
+      "output": "generated/release/trunet.luau",
+      "variants": [
+        {
+          "name": "Typed",
+          "darkluaConfig": "pipeline/darklua/typed.json",
+          "output": "generated/release/trunet-typed.luau"
+        },
+        {
+          "name": "Unminified",
+          "darkluaConfig": "pipeline/darklua/unminified.json",
+          "output": "generated/release/trunet-unminified.luau"
+        }
+      ]
+    }
+  ]
+}
