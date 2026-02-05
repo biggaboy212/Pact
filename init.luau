@@ -1,1 +1,1 @@
-return require("./lib/lib")
+return require("./lib")
