@@ -4,5 +4,6 @@ version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 include = ["init.luau", "lib/"]
+exclude = ["aftman.toml", "pipeline", "debug", ".vscode", ".globals"]
 
 [dependencies]
